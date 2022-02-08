@@ -1,0 +1,61 @@
+package com.gabryellr.gpstrack.information.adapter.outbound.database.mongodb;
+
+import com.gabryellr.gpstrack.information.adapter.inbound.model.Query;
+import com.gabryellr.gpstrack.information.adapter.outbound.database.mongodb.model.GpsInformationDocument;
+import com.gabryellr.gpstrack.information.core.model.GpsInformation;
+
+import java.time.OffsetDateTime;
+
+public class MockOutboundDatabaseFactory {
+
+    public static Query mockQuery() {
+        return Query.builder()
+                    .pages(1)
+                    .quantitiesPerPage(10)
+                    .endTime(OffsetDateTime.parse("2013-01-31T00:00:05Z"))
+                    .vehicleId(123)
+                    .busOperator("busOperatorId123")
+                    .vehicleJourneyID(456)
+                    .startTime(OffsetDateTime.parse("2013-03-31T00:00:05Z"))
+                    .build();
+    }
+
+    public static GpsInformation mockGpsInformation() {
+        return GpsInformation.builder()
+                             .blockId(123)
+                             .delay(456)
+                             .direction(789)
+                             .isAtStop(true)
+                             .isCongestion(false)
+                             .journeyPatternId("journeyPatternId123")
+                             .latitude(2.0)
+                             .longitude(1.0)
+                             .lineId(101112)
+                             .stopId(131415)
+                             .timeFrame(OffsetDateTime.parse("2013-01-31T00:00:05Z"))
+                             .timestamp(OffsetDateTime.parse("2013-01-31T00:00:05Z"))
+                             .busOperator("busOperatorId123")
+                             .vehicleId(161718)
+                             .build();
+    }
+
+    public static GpsInformationDocument mockGpsInformationDocument() {
+        GpsInformationDocument document = new GpsInformationDocument();
+        document.setBlockId(123);
+        document.setDelay(456);
+        document.setDirection(789);
+        document.setIsAtStop(true);
+        document.setIsCongestion(false);
+        document.setJourneyPatternId("journeyPatternId123");
+        document.setLatitude(2.0);
+        document.setLongitude(1.0);
+        document.setLineId(101112);
+        document.setStopId(131415);
+        document.setTimeFrame(OffsetDateTime.parse("2013-01-31T00:00:05Z"));
+        document.setTimestamp(OffsetDateTime.parse("2013-01-31T00:00:05Z"));
+        document.setBusOperator("busOperatorId123");
+        document.setVehicleId(161718);
+
+        return document;
+    }
+}
