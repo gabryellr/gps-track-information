@@ -27,4 +27,5 @@ When Springboot application start, Spring Batch will processe this file, convert
  ### How to use
 
 - When you see a message like this in the terminal, please follow the step below![img.png](img.png)
-- Go to: http://localhost:8080/swagger-ui.html and use the filter as you want
+- Go to: http://localhost:8080/swagger-ui.html and use the filter as you want or if you prefer, can import a postman collection with all calls 
+  already created.

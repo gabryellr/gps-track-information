@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "dc5ab1e9-23ad-4cf9-bb17-a0a331cef0ff",
+		"name": "GpsTrackInformation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/gpstrack",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"gpstrack"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all flter by operator ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/gpstrack?operatorId={{operatorId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"gpstrack"
+					],
+					"query": [
+						{
+							"key": "operatorId",
+							"value": "{{operatorId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all vehicles at stop by fleet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/gpstrack?fleet={{fleet}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"gpstrack"
+					],
+					"query": [
+						{
+							"key": "fleet",
+							"value": "{{fleet}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all flter by vehicle Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/gpstrack?fleet=3406&vehicleId={{vehicleId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"gpstrack"
+					],
+					"query": [
+						{
+							"key": "fleet",
+							"value": "3406"
+						},
+						{
+							"key": "vehicleId",
+							"value": "{{vehicleId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all by all filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/gpstrack?startTime={{startTime}}&endTime={{endTime}}&operatorId={{operatorId}}&fleet={{fleetId}}&vehicleId={{vehicleId}}&page={{pageNumber}}&size={{quantityPerPage}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"gpstrack"
+					],
+					"query": [
+						{
+							"key": "startTime",
+							"value": "{{startTime}}"
+						},
+						{
+							"key": "endTime",
+							"value": "{{endTime}}"
+						},
+						{
+							"key": "operatorId",
+							"value": "{{operatorId}}"
+						},
+						{
+							"key": "fleet",
+							"value": "{{fleetId}}"
+						},
+						{
+							"key": "vehicleId",
+							"value": "{{vehicleId}}"
+						},
+						{
+							"key": "page",
+							"value": "{{pageNumber}}"
+						},
+						{
+							"key": "size",
+							"value": "{{quantityPerPage}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
